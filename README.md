@@ -1,2 +1,2 @@
-# node-js
-Versão finao do curso de node-js do alura
+# Node.js
+Versão final do curso de Node.js do alura

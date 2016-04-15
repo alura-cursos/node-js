@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "host": "localhost",
+    "user": "root",
+    "password" : "",
+    "database": "casadocodigo_nodejs",
+    "driver": "mysql",
+    "multipleStatements": true
+  }
+}

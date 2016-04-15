@@ -1,0 +1,41 @@
+<%= include ../includes/header.ejs %>
+
+<div>
+    <div class ="container min-container">
+        <h2 class="basic-title">Add</h2>
+        <div class="errors">
+            <%if(validationErrors) { %>
+            <ul>
+                <% for(var i=0; i<validationErrors.length; i++) {%>
+                <li><%=validationErrors[i].param%> - <%=validationErrors[i].msg%></li>
+                <% } %>
+            </ul>
+            <%}%>
+        </div>
+        <form action="/produtos" method="post" class="well" role="form">
+            <div class="form-group">
+                <label for="titulo">Titulo</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked"></i></span>
+                    <input type="text" name="titulo" placeholder="titulo do livro" value="<%=produto.titulo%>"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked"></i></span>
+                    <input type="text" name="preco" placeholder="valor do livro" value="<%=produto.preco%>"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="descricao">Descricao</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-unchecked"></i></span>
+                    <textarea name="descricao"><%=produto.descricao%></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Gravar</button>
+        </form>
+    </div>
+</div>
+<%= include ../includes/footer.ejs %>

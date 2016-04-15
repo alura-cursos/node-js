@@ -1,0 +1,5 @@
+curl -H "Content-type: application/json"  -X POST -d '{"titulo":"novo livro","preco":150,"descricao":"descricao do livro"}' http://localhost:3000/produtos
+
+curl -H "Content-type: application/json" -H "Accept: application/json"  -X POST -d '{"titulo":"","descricao":""}' http://localhost:3000/produtos
+
+curl -H "Accept: application/json" http://localhost:3000/produtos
